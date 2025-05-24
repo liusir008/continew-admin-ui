@@ -17,8 +17,7 @@ export function encryptByMd5(txt: string) {
 }
 
 const publicKey
-  = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAM51dgYtMyF+tTQt80sfFOpSV27a7t9u'
-  + 'aUVeFrdGiVxscuizE7H8SMntYqfn9lp8a5GH5P1/GGehVjUD2gF/4kcCAwEAAQ=='
+  = 'MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA9zHWcYUSFLQ0IgWLarZ+pnVyreaWenpilPpwQwyAmW/yrRw3GuWaulnZgicD3EWG+8fEihdVrI2CeeF4tI4KwOL2lKl8trZu4qFX+qcgvsIizxcNuKXe+pf6xFirdxKWX8507ITm4U/hQSaNMPBjlg6Eg0IPNJteFeSEDZTeNhGMYVyz3AFLgXgSeAVPLQvmS6OFojz/WK3zgGEsCISFs3LWVs74tzGpJV+Tuhx+nwwYTiKuHIYl9Lsm0j6FAMNTjNs7Hh0+YRidKOKvfdd5HDpsa57dTX7OKIG6cahJS6lOhk6KeM0U2Jp2/70Cnod4UjBqT+9LvNyBjN4MjpYigQIDAQAB'
 
 export function encryptByRsa(txt: string) {
   const encryptor = new JSEncrypt()
@@ -26,7 +25,7 @@ export function encryptByRsa(txt: string) {
   return encryptor.encrypt(txt) // 对数据进行加密
 }
 
-const defaultKeyWork = 'XwKsGlMcdPMEhR1B'
+const defaultKeyWork = 'K8H23psg5Irw3vyB'
 
 export function encryptByAes(word, keyWord = defaultKeyWork) {
   const key = CryptoJS.enc.Utf8.parse(keyWord)
